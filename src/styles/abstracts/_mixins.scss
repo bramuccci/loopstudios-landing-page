@@ -1,0 +1,38 @@
+@mixin for-phone-only {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+@mixin card-background($name) {
+    background: linear-gradient(
+            90deg,
+            hsla(0, 0%, 0%, 0.5) 0%,
+            hsla(0, 0%, 0%, 0) 60%
+        ),
+        url('../assets/images/mobile/image-#{$name}.jpg') no-repeat center/cover;
+
+    @include for-tablet-portrait-up {
+        background-image: url('../assets/images/desktop/image-#{$name}.jpg');
+    }
+}

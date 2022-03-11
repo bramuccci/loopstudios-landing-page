@@ -1,0 +1,44 @@
+@use '../abstracts/' as *;
+
+.cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-rows: 8rem;
+    padding: 2em 0;
+}
+
+.card {
+    position: relative;
+    text-align: left;
+
+    .title {
+        position: absolute;
+        left: 1em;
+        bottom: 1em;
+    }
+
+    &--deep-earth {
+        @include card-background('deep-earth');
+    }
+    &--night-arcade {
+        @include card-background('night-arcade');
+    }
+    &--soccer-team {
+        @include card-background('soccer-team');
+    }
+    &--grid {
+        @include card-background('grid');
+    }
+    &--from-above {
+        @include card-background('from-above');
+    }
+    &--pocket-borealis {
+        @include card-background('pocket-borealis');
+    }
+    &--curiosity {
+        @include card-background('curiosity');
+    }
+    &--fisheye {
+        @include card-background('fisheye');
+    }
+}

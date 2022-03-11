@@ -1,0 +1,18 @@
+@use '../abstracts/' as *;
+
+.section {
+    text-align: center;
+
+    img {
+        display: block;
+    }
+
+    &__text {
+        background-color: $color-white;
+        padding: 2em 1em;
+
+        p {
+            color: $color-dark-gray;
+        }
+    }
+}
