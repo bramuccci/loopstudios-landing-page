@@ -1,0 +1,19 @@
+header {
+    background-image: url(../assets/images/mobile/image-hero.jpg);
+    height: 100vh;
+    padding: 3rem 1.5rem;
+
+    .title--primary {
+        border: 0.15rem solid currentColor;
+        padding: 1.5rem;
+        position: absolute;
+        inset: 0 1.5rem;
+        margin: auto;
+        height: fit-content;
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}

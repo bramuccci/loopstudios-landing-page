@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 /* alata-regular - latin */
 @font-face {
     font-family: 'Alata';
@@ -30,6 +32,16 @@ body {
     line-height: 1;
     text-transform: uppercase;
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+
+    &--white {
+        color: $color-white;
+    }
+
+    &--primary {
+        letter-spacing: 0.1rem;
+        font-size: 2.5rem;
+    }
 }
 
 .btn {
