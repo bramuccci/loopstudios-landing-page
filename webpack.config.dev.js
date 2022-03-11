@@ -7,15 +7,29 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
+        assetModuleFilename: 'assets/images/[name].[hash].[ext]',
     },
     resolve: {
         extensions: ['.js'],
     },
 
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                use: ['html-loader'],
+            },
+            {
+                test: /\.(png|jpg|svg)$/,
+                type: 'asset/resource',
+            },
+        ],
+    },
+
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
-            template: './public/index.html',
+            template: './src/index.html',
             filename: './index.html',
         }),
     ],
