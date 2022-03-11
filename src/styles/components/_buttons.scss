@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.btn {
+    background-color: transparent;
+    border: 0.1rem solid $color-black;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 1rem;
+    padding: 0.75rem 2.5rem;
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}

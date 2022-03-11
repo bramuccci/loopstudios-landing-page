@@ -1,0 +1,38 @@
+/* alata-regular - latin */
+@font-face {
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/alata-v7-latin-regular.woff2') format('woff2'),
+        url('../assets/fonts/alata-v7-latin-regular.woff') format('woff');
+}
+
+/* josefin-sans-300 - latin */
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/josefin-sans-v23-latin-300.woff2') format('woff2'),
+        url('../assets/fonts/josefin-sans-v23-latin-300.woff') format('woff');
+}
+
+:root {
+    font-size: 15px;
+}
+
+body {
+    // font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Alata', sans-serif;
+    line-height: 1.6;
+}
+
+.title {
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn {
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 0.25rem;
+}

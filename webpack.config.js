@@ -7,11 +7,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
-        clean: true,
-        assetModuleFilename: 'assets/images/[name].[hash].[ext]',
+        // clean: true,
+        assetModuleFilename: 'assets/[name].[hash].[ext]',
     },
     resolve: {
         extensions: ['.js'],
+        alias: {
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+        },
     },
 
     module: {
@@ -22,6 +25,15 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg)$/,
+                exclude: '/design/',
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(scss|css)$/i,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(woff|woff2)$/i,
                 type: 'asset/resource',
             },
         ],
