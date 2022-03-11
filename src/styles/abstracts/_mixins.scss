@@ -36,3 +36,10 @@
         background-image: url('../assets/images/desktop/image-#{$name}.jpg');
     }
 }
+
+@mixin reset-list {
+    list-style-type: none;
+    a {
+        text-decoration: none;
+    }
+}

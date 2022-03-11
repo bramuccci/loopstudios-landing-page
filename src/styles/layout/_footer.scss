@@ -1,3 +1,35 @@
+@use '../abstracts/' as *;
+
 .footer {
-    background-color: #000;
+    align-items: center;
+    background-color: $color-black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4em 0;
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+        padding: 1em 0;
+
+        @include reset-list;
+
+        a {
+            color: $color-white;
+        }
+    }
+
+    .social-media {
+        @include reset-list;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .rights {
+        color: $color-gray;
+    }
 }
