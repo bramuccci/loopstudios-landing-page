@@ -14,3 +14,19 @@
         color: $color-white;
     }
 }
+
+.main-nav__btn-toggle {
+    background: url(../assets/images/icon-hamburger.svg) no-repeat center/cover;
+    display: block;
+    height: 1.25rem;
+    position: fixed;
+    right: 2.5rem;
+    top: 3rem;
+    transition: background-image 250ms ease-in-out 100ms;
+    width: 1.5rem;
+    z-index: 9999;
+
+    &[aria-expanded='true'] {
+        background: url(../assets/images/icon-close.svg) no-repeat center/cover;
+    }
+}

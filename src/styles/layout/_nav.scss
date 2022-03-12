@@ -1,0 +1,49 @@
+@use '../abstracts/' as *;
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        @include reset-list;
+        display: flex;
+        gap: 2em;
+
+        a {
+            color: $color-white;
+        }
+    }
+
+    @include for-tablet-portrait-up {
+        &__btn-toggle {
+            display: none;
+        }
+    }
+
+    @include for-phone-only {
+        align-items: flex-start;
+        background-color: $color-black;
+        flex-direction: column;
+        justify-content: center;
+        inset: 0;
+        padding: 0 2rem;
+        position: fixed;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: 350ms transform ease-out;
+
+        &[data-visible='true'] {
+            transform: translateX(0%);
+        }
+
+        .logo {
+            position: absolute;
+            top: 3rem;
+        }
+
+        ul {
+            flex-direction: column;
+            gap: 1.5em;
+        }
+    }
+}
