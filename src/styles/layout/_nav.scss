@@ -8,9 +8,16 @@
         @include reset-list;
         display: flex;
         gap: 2em;
+    }
 
-        a {
+    @include for-big-desktop-up {
+        ul a {
             color: $color-white;
+            font-size: 1.5rem;
+        }
+
+        .logo {
+            height: 2rem;
         }
     }
 
