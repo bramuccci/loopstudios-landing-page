@@ -2,6 +2,7 @@
 
 .section {
     text-align: center;
+    position: relative;
 
     img {
         display: block;
@@ -13,6 +14,48 @@
 
         p {
             color: $color-dark-gray;
+        }
+    }
+
+    @include for-tablet-portrait-only {
+        padding: 0 2em;
+
+        &--statement {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+            > img {
+                width: 50vw;
+            }
+        }
+    }
+
+    @include for-tablet-landscape-up {
+        text-align: left;
+
+        &--statement {
+            > img {
+                content: url(../assets/images/desktop/image-interactive.jpg);
+                width: 65%;
+            }
+
+            &__text {
+                border: 1px solid $color-white;
+                bottom: 0;
+                position: absolute;
+                right: 0;
+                width: 50%;
+                padding: 4em 0em 0.5em 5em;
+            }
+        }
+
+        &--creations {
+            .btn {
+                position: absolute;
+                top: 1.25rem;
+                right: 0;
+            }
         }
     }
 }

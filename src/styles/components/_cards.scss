@@ -5,6 +5,21 @@
     gap: 1.5rem;
     grid-auto-rows: 8rem;
     padding: 2em 0;
+
+    @include for-tablet-portrait-up {
+        grid-auto-rows: 15rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-tablet-landscape-up {
+        gap: 2rem;
+        grid-auto-rows: 28rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include for-desktop-up {
+        padding-bottom: 0;
+    }
 }
 
 .card {
