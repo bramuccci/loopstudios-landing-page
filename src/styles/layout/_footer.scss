@@ -16,6 +16,7 @@
         padding: 1em 0;
 
         @include reset-list;
+        @include hover-list;
 
         a {
             color: $color-white;
@@ -24,9 +25,14 @@
 
     .social-media {
         @include reset-list;
+        @include hover-list;
         display: flex;
         gap: 1rem;
         align-items: center;
+
+        a {
+            color: $color-white; //this is for hover-list mixin to work properly
+        }
     }
 
     .rights {

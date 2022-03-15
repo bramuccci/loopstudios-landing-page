@@ -6,6 +6,7 @@
 
     ul {
         @include reset-list;
+        @include hover-list;
         display: flex;
         gap: 2em;
 
