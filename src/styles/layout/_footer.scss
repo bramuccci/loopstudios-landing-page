@@ -32,4 +32,25 @@
     .rights {
         color: $color-gray;
     }
+
+    @include for-tablet-landscape-up {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            'logo social-media'
+            'links rights';
+        justify-content: space-between;
+        padding: 2.5em 7.5em;
+
+        .social-media {
+            grid-area: social-media;
+            justify-self: end;
+        }
+
+        &__links {
+            grid-area: links;
+            flex-direction: row;
+        }
+    }
 }
