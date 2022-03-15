@@ -39,7 +39,8 @@
         ),
         url('../assets/images/mobile/image-#{$name}.jpg') no-repeat center/cover;
 
-    &:hover {
+    &:hover,
+    &:focus {
         cursor: pointer;
         background-image: linear-gradient(#fff9, #fff9),
             url('../assets/images/mobile/image-#{$name}.jpg');
@@ -50,7 +51,8 @@
     }
 
     @include for-tablet-portrait-up {
-        &:hover {
+        &:hover,
+        &:focus {
             background-image: linear-gradient(#fff9, #fff9),
                 url('../assets/images/desktop/image-#{$name}.jpg');
         }
@@ -81,7 +83,8 @@
     a {
         position: relative;
 
-        &:hover::before {
+        &:hover::before,
+        &:focus-visible::before {
             background-color: currentColor;
             border-radius: 0.05rem;
             content: '';
@@ -91,6 +94,11 @@
             inset: auto 0 -0.5em;
             margin: auto;
             width: 50%;
+        }
+
+        &:focus::before {
+            height: 0.5em;
+            width: 100%;
         }
     }
 }
